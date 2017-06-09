@@ -1,0 +1,8 @@
+--reporter=spec
+--growl
+--ui bdd
+--recursive
+--check-leaks
+--colors
+--bail
+./**/*-test.js
