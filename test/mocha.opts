@@ -1,6 +1,8 @@
 --reporter=spec
 --growl
 --ui bdd
+--require babel-polyfill
+--compilers js:babel-register
 --recursive
 --check-leaks
 --colors
