@@ -4,7 +4,7 @@ import * as process from 'process';
 import Debug from 'debug';
 import * as chalk from 'chalk';
 
-import { buildTreeSync } from './tree';
+import { buildTreeSync } from './tree-sync';
 
 
 const debug = Debug('dir-manager');

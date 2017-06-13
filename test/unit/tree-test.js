@@ -2,7 +2,7 @@ import { describe, it } from 'mocha';
 import { fs } from 'mz';
 import * as path from 'path';
 
-import { buildTreeSync, getChildrenSync, getName, getStatsSync } from '../../src/tree';
+import { buildTreeSync, getChildrenSync, getName, getStatsSync } from '../../src/tree-sync';
 
 const expect = require('chai').expect;
 

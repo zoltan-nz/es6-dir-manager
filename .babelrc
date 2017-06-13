@@ -1,8 +1,17 @@
 {
-	"env": {
-		"node": true,
-		"mocha": true,
-		"chai": true
-	},
-	"presets": ["env"]
+  "env": {
+    "node": true,
+    "mocha": true,
+    "chai": true
+  },
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ]
 }
