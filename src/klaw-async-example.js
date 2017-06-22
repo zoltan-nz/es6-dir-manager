@@ -5,15 +5,16 @@ const mainDirectory = process.argv[2];
 const pwd = process.cwd();
 const resolvedDirectory = path.resolve(pwd, mainDirectory);
 
-var items = []; // files, directories, symlinks, etc
+const items = []; // files, directories, symlinks, etc
 klaw(resolvedDirectory)
   .on('readable', function () {
-    var item;
-    while ((item = this.read())) {
+    let item = this.read();
+    while (item) {
       items.push(item.path);
+      item = this.read();
     }
   })
-  .on('end', function () {
+  .on('end', () => {
     // console.dir(items); // => [ ... array of files]
     console.log('size', items.length);
   });
